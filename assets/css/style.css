@@ -174,7 +174,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 40px;
+    padding: 15px 40px;
 }
 .nav-logo {
     font-family: var(--font-display);
@@ -272,20 +272,7 @@ body {
     max-width: 800px;
     z-index: 10;
 }
-.hero-badge {
-    display: inline-block;
-    background: rgba(220, 156, 58, 0.2);
-    border: 1px solid rgba(220, 156, 58, 0.45);
-    padding: 6px 16px;
-    border-radius: 30px;
-    font-family: var(--font-display);
-    color: var(--accent-color);
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    backdrop-filter: blur(10px);
-}
+
 .hero-title {
     font-family: var(--font-display);
     font-size: clamp(3rem, 7vw, 4rem);
@@ -301,13 +288,13 @@ body {
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 300;
     color: var(--text-sec);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .hero-desc {
     font-size: 1.1rem;
     color: var(--text-sec);
     line-height: 1.7;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     max-width: 600px;
 }
 .hero-ctas {
@@ -415,6 +402,12 @@ body {
 }
 
 /* --- Layout Design Block: Timeline Module --- */
+    .experience-section{
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 80px 40px;
+    }
 .timeline {
     position: relative;
     max-width: 1000px;
@@ -594,6 +587,35 @@ body {
     }
 }
 
+@media only screen and (min-width:768px) and (max-width:819px){
+    .timeline-description {
+        position: relative;
+        top: auto;
+        left: auto !important;
+        right: auto !important;
+
+        width: 100%;
+        max-width: 100%;
+
+        transform: none;
+
+        margin-top: 20px;
+
+        text-align: left !important;
+
+        padding: 0 10px;
+    }
+
+    .timeline-description p {
+        max-width: 100%;
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    .timeline-description .description-number {
+        margin-bottom: 8px;
+    }
+}
 
 /* =========================================
    MOBILE
@@ -864,7 +886,7 @@ body {
 @media(max-width:768px){
 
 .education-section{
-    padding:70px 0;
+    padding:70px 20px;
 }
 
 .education-section .section-title{
@@ -917,6 +939,10 @@ body {
     padding:10px 20px;
     font-size:15px;
 }
+.education-grid .pin-spacer:last-child{
+    height: 600px !important;
+}
+
 
 }
 
@@ -965,7 +991,10 @@ body {
 
 /* --- Layout Design Block: Grid Tech Skills --- */
 .skills-section{
-    margin-top: 50px;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0px 40px;
+    margin: 150px auto 0px auto;
 }
 .skills-grid {
     display: grid;
@@ -1017,6 +1046,12 @@ body {
 }
 
 /* --- Layout Design Block: Interactive Projects Engine --- */
+.portfolio-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 40px;
+}
 .portfolio-filters {
     display: flex;
     gap: 15px;
@@ -1199,6 +1234,10 @@ body {
 /* --- Layout Design Block: Transactional Forms & Contact --- */
 .contact-section{
     text-align: center;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 100px 40px;
 }
 .contact-grid {
     display: grid;
@@ -1706,9 +1745,27 @@ body {
         grid-template-columns: 1fr;
         gap: 60px;
     }
+    .nav-logo img {
+        width: 50%;
+    }
 }
 
-@media (max-width: 580px) {
+@media only screen and (min-width:768px) and (max-width:800px) {
+    .timeline-glowing-ball{
+        left: 3% !important;
+    }
+    .timeline-scroll-indicator{
+        left: 3% !important;
+    }
+    .nav-logo{
+        text-align: center;
+    }
+    .nav-logo img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 767px) {
     .interactive-profile-wrapper {
         width: 100%;
         height: auto;
@@ -1734,6 +1791,64 @@ body {
     }
     .btn-download, .btn-contact {
         justify-content: center;
+    }
+    .nav-logo{
+        text-align: center;
+    }
+    .nav-logo img {
+        width: 50%;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 7vw, 4rem);
+    }
+    .hero-subtitle{
+        font-size: 20px;
+    }
+    .hero-desc{
+        font-size:1rem;
+    }
+    .hero-ctas{
+        display: block;
+    }
+    .hero-ctas a{
+        margin-bottom: 10px;
+    }
+    .section-title {
+        font-size: 2.5rem;
+    }
+    .section-subtitle {
+        font-size: 1.15rem;
+    }
+    .hero-section {
+        padding: 0 5%;
+    }
+    .about-container {
+        padding: 0px 20px;
+    }
+    .experience-section, .skills-section, .portfolio-section, .contact-section{
+        padding: 0px 20px;
+    }
+    .portfolio-section, .contact-section{
+        padding-top: 70px;
+        padding-bottom: 0px;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .timeline-glowing-ball{
+        left: 6% !important;
+    }
+    .timeline-scroll-indicator{
+        left: 6% !important;
+    }
+    .section-header {
+        margin-bottom: 40px;
+    }
+    .footer-content {
+        padding: 0 20px;
+        
     }
 }
 
